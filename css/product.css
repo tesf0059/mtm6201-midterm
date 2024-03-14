@@ -1,0 +1,123 @@
+/* root color of the product page */
+:root{
+    --primary--color:#ff5722;
+    --secondary--color:white;
+    --base--color:#ff56225e;
+}
+
+body{
+    background-color:var(--base--color);
+}
+/* used grid layout to vertically place the layout in three equal part and when the screen szie change it also change the lay out depends on the screen size.*/
+.grid{
+    margin: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    align-items: center;
+}
+
+/* this code style the article page. all the article page contetn are similar so it style the image and the content widht and height and other property inside the article*/
+article{
+    background-color:var(--base--color);
+    width: 300px;
+    height: 550px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 0px rgb(83, 83, 83);
+    text-align: center;  
+    transition: transform 0.5s;
+    
+}
+/* when the mouse hover on the article, image and the content will grow by 1.07 */
+article:hover{
+    transform: scale(1.07);
+
+}
+/* this is the style for h1 and make the color similar to the content of the home pge */
+h1{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--secondary--color);
+    background-color:var(--base--color);
+    margin-top: 0;
+   width: 100%;
+}
+.text-product > p > a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    margin: 20px;
+    border: #CF626D 2px solid;
+    width: 60px;
+}
+.text h3{
+    text-transform: uppercase;
+    color: black;
+}
+button{
+    width: 50%;
+    height: 45px;
+    border-radius: 10px;
+    background-color: #fffffffb;
+    border-color: var(--base--color);
+    text-transform: uppercase;
+}
+button a{
+    font-size: 20px;
+    text-decoration: none;
+    color:  var(--base--color);
+    font-weight: bold; 
+}
+button:hover{
+    cursor: pointer;
+}
+/* when the screen size max 1338 px the grid change 3 to 2 vertically */
+@media screen and (max-width: 1338px){
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+        align-items: center;
+    }
+}
+/* when the screen size max 1338 px the grid change 1 column*/
+@media screen and (max-width: 650px) {
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+        align-items: center;
+    }
+    article{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 440px) {
+    .grid{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-gap: 20px;
+        align-items: center;
+        margin: 10px;
+    }
+    article{
+        text-align: center;
+        width: 90%;
+    }
+    img{
+        width: 100%;
+    }
+    article{
+        height: 610px;
+        margin: 20px;       
+    }
+    .text-product > p > a{
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        margin: 5px;
+        border: #CF626D 2px solid;
+        width: 60px;
+    }
+}

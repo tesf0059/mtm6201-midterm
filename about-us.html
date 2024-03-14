@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/about-us.css">
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+        <h2>Our Story</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec varius ante. Fusce consequat mi ac nulla fermentum, ac ultricies justo rutrum. Sed auctor rutrum libero, id sollicitudin eros finibus quis. Proin vel dolor aliquam, aliquet ex nec, varius ipsum. Integer quis purus neque.</p>
+        <p>Donec eget sollicitudin mauris, et faucibus est. Pellentesque aliquam erat a risus dignissim, ac sodales tortor ultrices. Morbi tincidunt pharetra justo, non tempor tortor malesuada sit amet. Fusce at feugiat quam, et lacinia turpis. Nulla nec interdum arcu. Donec in dolor nec odio tempor tristique.</p>
+    </section>
+
+    <section class="team">
+        <h2>Our Team</h2>
+        <div class="member">
+            <img src="about-images/Solomon.jpeg" alt="Team Member 1">
+            <h3>Solomon Tesfaye</h3>
+            <p>CEO</p>
+        </div>
+        <div class="member">
+            <img src="about-images/sam.JPG" alt="Team Member 2">
+            <h3>Samuel Haile</h3>
+            <p>CTO</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form action="submit_contact.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bella Onojie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -99,42 +99,44 @@ h1{
 .heading{
     display: inline-block;
     position:absolute;
-    text-transform: uppercase;
     font-size: 30px;
     color: #CF626D;
     padding: 20px 45px 20px ;
     line-height: 80px;
     top: 35%;
-    margin: 20px 10px;
     text-align: center;
+    margin-left: 80px;
+
+
 }
 
- 
-/* styling and decorating the button */
-button{
+#hd-p {
+    text-align: center;
+    color: white;
+
+}
+/* Button styling */
+button {
     width: 170px;
     height: 60px;
-    border-radius: 10px;
+    border-radius: 35px;
     margin-top: 10px;
-    background-color: #f7e4e5fd;
-    border-color: #CF626D;
+    color: white;
+    font-size: medium;
+    font-weight:bold;
+    background-color: #FA4A0C;
     transition: width 1000ms ease-in-out;
 }
-
-button span{
-    width: 170px;
-    height: 60px;
-    border-radius: 10px;
-    margin-top: 10px;
-    background-color: #f7e4e5fd;
-    border-color: #CF626D;
-    transition: width 1000ms ease-in-out;
+.heading .btn-2 {
+    background-color: transparent; 
+    border: 1px solid white; 
+    color: white; 
 }
-
-/* when the hover on the botton it increase the width */
-button:hover{
+.heading .btn-1{
+    border: 1px solid #FA4A0C;
+}
+button:hover {
     width: 200px;
-    color: #e95906;
 }
 
 .sec1 {
@@ -153,7 +155,9 @@ button:hover{
     flex-direction: row; /* Arrange items horizontally */
     align-items: center; /* Align items vertically in the center */
 }
-
+.img3-txt, h2, p {
+    margin: 10px;
+}
 hr {
     width: 80%;
     margin-left: 100px;
@@ -162,6 +166,7 @@ hr {
 #sec-h2 {
     text-align: center;
     margin: 20px;
+    font-size: 2rem;
 }
 .img2 {
     flex: 1; 
@@ -177,10 +182,12 @@ hr {
 .img2-txt {
     flex: 1; 
     padding: 0 20px; 
+  
 }
 .img-t{
     color: #e95906;
     font-weight: bold;
+    margin: 10px;
 }
 .img2-txt h2 {
     margin-top: 0; 
@@ -219,6 +226,13 @@ hr {
     margin-top: 0; 
 }
 
+
+
+
+/* Banner styling */
+.img5 img {
+    width: 100%;
+}
 /* footer */
 
 /* Footer styling */
@@ -244,50 +258,30 @@ footer .footer-banner p {
     color: white;
 }
 
-footer .btn1,
-footer .btn2 {
-    background-color: #CF626D;
+footer .btn1{
+    width: 170px;
+    height: 60px;
+    border-radius: 35px;
+    margin-top: 10px;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin: 5px;
+    font-size: medium;
+    font-weight:bold;
+    background-color: #FA4A0C;
+    transition: width 1000ms ease-in-out;
+    border: 1px solid #FA4A0C;
 }
+
+footer .btn2 {
+    background-color: transparent; 
+    border: 1px solid white; 
+    color: white;
+}
+ 
 
 footer .btn1:hover,
 footer .btn2:hover {
     background-color: #dddddd;
     cursor: pointer;
-}
-
-/* Button styling */
-button {
-    width: 170px;
-    height: 60px;
-    border-radius: 10px;
-    margin-top: 10px;
-    background-color: #f7ece4fd;
-    border-color: #CF626D;
-    transition: width 1000ms ease-in-out;
-}
-
-button span {
-    width: 170px;
-    height: 60px;
-    border-radius: 10px;
-    margin-top: 10px;
-    background-color: #f7e4e5fd;
-    border-color: #CF626D;
-    transition: width 1000ms ease-in-out;
-}
-
-button:hover {
-    width: 200px;
-}
-
-/* Banner styling */
-.img5 img {
-    width: 100%;
 }
 
 
@@ -380,47 +374,6 @@ button:hover {
         align-items: center; /* Center align items */
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* this is meadia query between 310px and 649px and also this make the nav display change from inline-block to block because small screen size*/
 @media screen and (min-width: 310px) and (max-width: 649px){
     ul li {
@@ -498,5 +451,5 @@ button:hover {
         margin: 0 20px 20px 0;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    }    
+    }
 }

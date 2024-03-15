@@ -3,32 +3,52 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: antiquewhite;
 }
 
-header {
-    background-color:#ec8021;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+
+/* this code style the header backgound color, color and all the padding and position1 */
+.header-text{
+    background-color:white;
+    padding: 15px 30px;
+    height: 100px;
+    color: black;
+    position: relative;
+    z-index: 1;
+}
+/* This code make the logo postion on the left side with the size of 45px */
+.logo {
+    float: left;
+    font-size: 45px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+    margin-left: 20px; /* Adjusting the margin-left */
 }
 
-header h1 {
-    margin: 0;
+/* Moving the navigation bar to the right */
+.navbar {
+    line-height: 40px;
+    float: right; /* Change float to right */
+    margin: 0 150px 0 0; /* Adjusting margin to create space on the right */
 }
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
+/* used inline- block display property to the nav bar because it is web size screen */
+ul li {
+    display: inline-block;
+    padding: 25px;
+    font-size: 20px;
 }
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
+/* used text-decoration properlty none to hidden the link style */
+ul li a{
     text-decoration: none;
-    color: #fff;
+    color:  var(--nav--color);
+    padding: 25px;
+}
+/* when the  mouse hover in the navigation this code  change the bacckground color and the color of the link */
+.navbar a:hover{
+    color: var(--primary--color);
+    background-color: var(--secondary--color);
+    border-radius: 8px;
 }
 
 .about,

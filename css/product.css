@@ -8,6 +8,47 @@
 body{
     background-color:var(--base--color);
 }
+.header-text{
+    background-color:white;
+    padding: 15px 30px;
+    height: 100px;
+    color: black;
+    position: relative;
+    z-index: 1;
+}
+/* This code make the logo postion on the left side with the size of 45px */
+.logo {
+    float: left;
+    font-size: 45px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+    margin-left: 20px; /* Adjusting the margin-left */
+}
+
+/* Moving the navigation bar to the right */
+.navbar {
+    line-height: 40px;
+    float: right; /* Change float to right */
+    margin: 0 150px 0 0; /* Adjusting margin to create space on the right */
+}
+/* used inline- block display property to the nav bar because it is web size screen */
+ul li {
+    display: inline-block;
+    padding: 25px;
+    font-size: 20px;
+}
+/* used text-decoration properlty none to hidden the link style */
+ul li a{
+    text-decoration: none;
+    color:  var(--nav--color);
+    padding: 25px;
+}
+/* when the  mouse hover in the navigation this code  change the bacckground color and the color of the link */
+.navbar a:hover{
+    color: var(--primary--color);
+    background-color: var(--secondary--color);
+}
 /* used grid layout to vertically place the layout in three equal part and when the screen szie change it also change the lay out depends on the screen size.*/
 .grid{
     margin: 80px;

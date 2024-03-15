@@ -1,211 +1,489 @@
-/* Reset CSS */
-* {
+/* These are the root color of the home page and these two color are moslt used in the page */
+:root{
+    --primary--color:#CF626D;
+    --secondary--color:white;
+    --nav--color--: black;
+}
+/* rest code */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
+body{
+    font-family: sans-serif;
 }
-
-/* Container Styles */
-.container {
-    max-width: auto;
-    margin: 0 auto;
-    padding: 40px;
-}
-
-/* Header Styles */
-.banner {
-    background-image: url('../images/banner.png');
+/* used linear gradient to overlay the color on the background image */
+.header{
+    background-image: linear-gradient( rgba(107, 97, 97, 0.788),#4e3e3e47),url(../images/Banner.png);
+    height: 100vh;
+    width: 100%;
     background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px;
 }
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
-
-.logo img {
-    max-width: 100px;
-    height: auto;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li a {
-    margin: 0 15px;
-    color: rgb(246, 0, 0);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.banner p,
-.banner h1,
-.banner button {
+/* this code style the header backgound color, color and all the padding and position1 */
+.header-text{
+    background-color:white;
+    padding: 15px 30px;
+    height: 100px;
+    color: black;
     position: relative;
     z-index: 1;
 }
-
-/* Section 1 Styles */
-.sec1 img {
-    width: 100%;
-    height: auto;
+/* This code make the logo postion on the left side with the size of 45px */
+.logo {
+    float: left;
+    font-size: 45px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+    margin-left: 20px; /* Adjusting the margin-left */
 }
 
-.sec1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: rgba(0, 0, 0, 0.5);
+/* Moving the navigation bar to the right */
+.navbar {
+    line-height: 40px;
+    float: right; /* Change float to right */
+    margin: 0 150px 0 0; /* Adjusting margin to create space on the right */
 }
 
-/* Section 2 and Section 3 Styles */
-.sec2,
-.sec3,
-.sec4 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 0;
+/* used inline- block display property to the nav bar because it is web size screen */
+ul li {
+    display: inline-block;
+    padding: 25px;
+    font-size: 20px;
+}
+/* used text-decoration properlty none to hidden the link style */
+ul li a{
+    text-decoration: none;
+    color:  var(--nav--color);
+    padding: 25px;
+}
+/* when the  mouse hover in the navigation this code  change the bacckground color and the color of the link */
+.navbar a:hover{
+    color: var(--primary--color);
+    background-color: var(--secondary--color);
+    border-radius: 8px;
+}
+
+h1{
+    color: white;
+    font-size: 3rem;
+}  
+#tp-p{
+    color: white;
+    text-align: center;
+}
+/* this code make the heading style postion, text transformation and other property */
+.heading{
+    display: inline-block;
+    position:absolute;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--primary--color);
+    padding: 20px 45px 20px ;
+    line-height: 80px;
+    top: 35%;
+    margin: 20px 10px;
+    text-align: center;
+}
+
+ 
+
+button{
+    width: 170px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #f7e4e5fd;
+    border-color: var(--primary--color);
+    transition: width 1000ms ease-in-out;
+}
+
+button span{
+    width: 170px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #f7e4e5fd;
+    border-color: var(--primary--color);
+    transition: width 1000ms ease-in-out;
+}
+
+/* when the hover on the botton it width increade from 170px to 200px with 1000ms and eas-in-out transition*/
+button:hover{
+    width: 200px;
+}
+
+.sec1 {
+    text-align: center; /* Aligns the content (including the image) to the center horizontally */
 }
 
 #img-top {
-    width: 50%;
-    margin: 0 auto; /* Center the element horizontally */
-    display: block; /* Ensures the image is treated as a block element */
+    display: block; /* Makes the image a block-level element */
+    margin: 0 auto; /* Centers the image horizontally within its container */
+    width: 35%;
+    margin-top: -180px;
+}
+
+.sec2 {
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+    align-items: center; /* Align items vertically in the center */
+}
+
+hr {
+    width: 80%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#sec-h2 {
+    text-align: center;
+    margin: 20px;
+}
+.img2 {
+    flex: 1; 
+
+}
+
+.img2 img {
+    width: 100%; 
+   
+    
+}
+
+.img2-txt {
+    flex: 1; 
+    padding: 0 20px; 
+}
+.img-t{
+    color: #e95906;
+    font-weight: bold;
+}
+.img2-txt h2 {
+    margin-top: 0; 
+}
+/* sec-3 */
+
+.sec3 {
+    display: flex;
+    flex-direction: row-reverse; /* Arrange items horizontally in reverse order */
+    align-items: center; /* Align items vertically in the center */
+}
+#sec-3-h2 {
+    text-align: center;
+    margin: 20px;
+}
+hr {
+    width: 80%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.img3 {
+    flex: 1; /* Make the image take up available space */
+}
+
+.img3 img {
+    width: 100%; /* Make the image fill its container */
+}
+
+.img3-txt {
+    flex: 1; /* Make the text take up available space */
+    padding: 20px;
+    margin-left: 100px; 
+}
+
+.img3-txt h2 {
+    margin-top: 0; /* Remove default margin for h2 */
+}
+
+/* footer */
+
+/* Footer styling */
+footer .sec5 {
+    position: relative;
+}
+
+footer .img5 {
+    position: relative;
+}
+
+footer .footer-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     z-index: 1;
 }
 
-.img2,
-.img3,
-.img4 {
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
+footer .footer-banner h2,
+footer .footer-banner p {
+    color: var(--secondary--color);
 }
 
-.img2 img,
-.img3 img,
-.img4 img {
-    width: 100%;
-    height: auto;
-}
-
-.img2-txt,
-.img3-txt,
-.img4-txt {
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-/* Section 5 Styles */
-.sec5 {
-    background-color: #333;
-    padding: 50px;
-    color: white;
-}
-
-/* Footer Styles */
-.footer-banner {
-    text-align: center;
-}
-
-/* Button Styles */
-.btn1,
-.btn2 {
+footer .btn1,
+footer .btn2 {
+    background-color: var(--primary--color);
+    color: var(--secondary--color);
     padding: 10px 20px;
-    margin: 10px;
-    background-color: #ff5722;
-    color: white;
     border: none;
     border-radius: 5px;
+    margin: 5px;
+}
+
+footer .btn1:hover,
+footer .btn2:hover {
+    background-color: #dddddd;
     cursor: pointer;
 }
 
-.btn1:hover,
-.btn2:hover {
-    background-color: #6adb36cd;
+/* Button styling */
+button {
+    width: 170px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #f7e4e5fd;
+    border-color: var(--primary--color);
+    transition: width 1000ms ease-in-out;
 }
 
-/* Additional Styles */
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #ccc;
-    margin: 20px 0;
+button span {
+    width: 170px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #f7e4e5fd;
+    border-color: var(--primary--color);
+    transition: width 1000ms ease-in-out;
 }
 
-h2 {
-    color: #333;
-    margin-bottom: 10px;
+button:hover {
+    width: 200px;
 }
 
-p {
-    line-height: 1.6;
+/* Banner styling */
+.img5 img {
+    width: 100%;
 }
 
-/* Media Queries */
-@media only screen and (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
 
-    .banner {
-        padding: 50px;
-    }
 
-    .navbar {
-        padding: 10px;
-    }
 
-    nav ul li {
-        margin: 0 10px;
-    }
 
-    .sec1 {
-        padding: 30px;
-    }
 
-    .sec2,
-    .sec3,
-    .sec4 {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-    .img2,
-    .img3,
-    .img4 {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* styling the footer text aliggn and width and height  */
+
+/* this is meadia query for max-size 1339 and when the screen max size 1339 the below code will apply*/
+@media screen and (max-width: 1338px){
+    .logo{
+        float: left;
+        font-size: 40px;
+        line-height: 10px;
+        padding: 30px 40px 20px ;
+    }
+    .navbar{
+        line-height: 20px;
+        float: left;
+        margin: 0 0 0 75px;
+        
+    }
+    ul li {
+        display: inline-block;
+        padding: 25px;
+        font-size: 15px;
+    }
+    .heading{
+        display: inline-block;
+        position:absolute;
+        font-size: 30px;
+        color: var(--primary--color);
+        padding: 20px 45px 20px ;
+        top: 40%;
+        margin: 20px 10px;
+        text-align: center;
+    }
+}
+/* this is meadia query for max-size 1050*/
+@media screen and (max-width: 1050px){
+    .logo{
+        font-size: 40px;
+        line-height: 10px;
+        padding: 30px 40px 20px ;
+        margin: 0 0 10px 180px;
+        border-bottom:  var(--secondary--color) 1px solid;
+    }
+    .header-text{
+        height: 200px;
+    }
+    .navbar{
+        line-height: 20px;
+        float: left;
+        margin: 0 0 0 180px;
+        
+    }    
+    .heading-h1{
+        font-size: 50px;
+    }
+}
+/* this is meadia query between 650px and 927px and the code make the nav bar display block because of the screen size*/
+@media screen and (min-width: 650px) and (max-width: 927px){
+    ul li {
+        display: block;
+        padding: 25px;
+        font-size: 15px;
+    }
+    .header-text{
+        height: 280px;
+    }
+    .logo{
+        float: left;
+        font-size: 30px;
+        margin-left: 0%;
+        border-bottom:  var(--secondary--color) 1px solid;
+
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* this is meadia query between 310px and 649px and also this make the nav display change from inline-block to block because small screen size*/
+@media screen and (min-width: 310px) and (max-width: 649px){
+    ul li {
+        display: block;
+        padding: 25px;
+        font-size: 15px;
+    }
+    ul li a{
+        text-align: center;
+    }
+    .header-text{
+        height: 280px;
+    }
+    .heading{
+        text-align: center;
+        margin-left: 50px;
+        position: absolute;
+        top: 55%;
+    }
+    .heading-h1{
+        font-size: 40px;
+        line-height: 40px;
+       
+    }
+    .logo{
+        float: left;
+        font-size: 25px;
+        margin-left: 20px;
+        border-bottom:  var(--secondary--color) 1px solid;
+        max-width: 100%;
+    }
+    button{
+        width: 150px;
+        height: 40px;
+    }
+    button a{
+      font-size: 15px;
+    }
+    .header{
+        background-image: linear-gradient( rgba(253, 247, 247, 0.788),#d6a6a675),url(../images/Mobile-size.jpg);
+        height: 100vh;
         width: 100%;
+        background-size: cover;
     }
+ 
+}
+/* this is meadia query for max-size 450 and below and also this make the nav display change from inline-block to block because small screen size*/
+@media screen and (max-width: 425px){
+    ul li{
+       padding: 15px; 
+       
+    }
+    ul li a{
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+        padding: 2px;     
+    }
+    a.active{
+        text-decoration: underline;
+    }
+    .logo{
+        font-size: 29px;
+        line-height: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .header-text{
+        height: 350px;
+    }
+    .heading-h1{
+        font-size: 20px;
+        color: #45272a;
+        line-height: 50px;
+        border: #45272a 5px solid;
+        padding: 20px;
+        margin: 0 20px 20px 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    .img2-txt,
-    .img3-txt,
-    .img4-txt {
-        padding: 10px;
-    }
-
-    .sec5 {
-        padding: 30px;
-    }
+    }    
 }

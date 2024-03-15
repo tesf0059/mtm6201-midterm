@@ -381,19 +381,6 @@ button:hover {
     }
 }
 
-/* For screen sizes between 426px and 650px */
-@media screen and (min-width: 426px) and (max-width: 650px) {
-    /* Adjustments for the h1 */
-    .heading-h1 {
-        font-size: px; /* Adjust font size */
-    }
-}
-
-
-
-
-
-
 
 
 

@@ -41,13 +41,13 @@ ul li {
 /* used text-decoration properlty none to hidden the link style */
 ul li a{
     text-decoration: none;
-    color:  var(--nav--color);
+    color:  black;
     padding: 25px;
 }
 /* when the  mouse hover in the navigation this code  change the bacckground color and the color of the link */
 .navbar a:hover{
-    color: var(--primary--color);
-    background-color: var(--secondary--color);
+    color: black;
+    background-color: white;
     border-radius: 8px;
 }
 
@@ -93,11 +93,11 @@ ul li a{
     border-radius: 5px;
     box-sizing: border-box;
 }
-
+/* adjusting the hights  */
 .contact textarea {
     height: 200px;
 }
-
+/* decorating and styling the contact button */
 .contact button {
     padding: 10px 20px;
     background-color: #e58a52;
@@ -107,11 +107,11 @@ ul li a{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
+/* chngr the background color when over */
 .contact button:hover {
     background-color: #555;
 }
-
+/* styling the footer color and aligning it   */
 footer {
     background-color: #333;
     color: #fff;

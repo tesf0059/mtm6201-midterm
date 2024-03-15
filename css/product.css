@@ -1,12 +1,6 @@
-/* root color of the product page */
-:root{
-    --primary--color:#ff5722;
-    --secondary--color:white;
-    --base--color:#ff56225e;
-}
-
+/* changing the color of the background */
 body{
-    background-color:var(--base--color);
+    background-color:antiquewhite;
 }
 .header-text{
     background-color:white;
@@ -29,27 +23,27 @@ body{
 /* Moving the navigation bar to the right */
 .navbar {
     line-height: 40px;
-    float: right; /* Change float to right */
-    margin: 0 150px 0 0; /* Adjusting margin to create space on the right */
+    float: right; 
+    margin: 0 150px 0 0; 
 }
-/* used inline- block display property to the nav bar because it is web size screen */
+/* list items */
 ul li {
     display: inline-block;
     padding: 25px;
     font-size: 20px;
 }
-/* used text-decoration properlty none to hidden the link style */
+
 ul li a{
     text-decoration: none;
-    color:  var(--nav--color);
+    color:  black;
     padding: 25px;
 }
-/* when the  mouse hover in the navigation this code  change the bacckground color and the color of the link */
+
 .navbar a:hover{
-    color: var(--primary--color);
-    background-color: var(--secondary--color);
+    color: #ff5722;
+    background-color: white;
 }
-/* used grid layout to vertically place the layout in three equal part and when the screen szie change it also change the lay out depends on the screen size.*/
+/* Aligning the cards */
 .grid{
     margin: 80px;
     display: grid;
@@ -58,9 +52,9 @@ ul li a{
     align-items: center;
 }
 
-/* this code style the article page. all the article page contetn are similar so it style the image and the content widht and height and other property inside the article*/
+/* styling the cards  */
 article{
-    background-color:var(--base--color);
+    background-color:rgb(249, 225, 193);
     width: 300px;
     height: 550px;
     border: none;
@@ -70,20 +64,21 @@ article{
     transition: transform 0.5s;
     
 }
-/* when the mouse hover on the article, image and the content will grow by 1.07 */
+/* Adding animation when hover over */
 article:hover{
     transform: scale(1.07);
 
 }
-/* this is the style for h1 and make the color similar to the content of the home pge */
+
 h1{
     text-align: center;
     font-size: 3rem;
-    color: var(--secondary--color);
-    background-color:var(--base--color);
+    color: white;
+    background-color:#ff56225e;
     margin-top: 0;
    width: 100%;
 }
+/* Decorating the text */
 .text-product > p > a{
     text-decoration: none;
     font-size: 20px;
@@ -101,19 +96,20 @@ button{
     height: 45px;
     border-radius: 10px;
     background-color: #fffffffb;
-    border-color: var(--base--color);
+    border-color: #ff56225e;
     text-transform: uppercase;
 }
+
 button a{
     font-size: 20px;
     text-decoration: none;
-    color:  var(--base--color);
+    color:  #ff56225e;
     font-weight: bold; 
 }
 button:hover{
     cursor: pointer;
 }
-/* when the screen size max 1338 px the grid change 3 to 2 vertically */
+/* Media quiry for smaller screens  */
 @media screen and (max-width: 1338px){
     .grid{
         display: grid;
@@ -122,7 +118,6 @@ button:hover{
         align-items: center;
     }
 }
-/* when the screen size max 1338 px the grid change 1 column*/
 @media screen and (max-width: 650px) {
     .grid{
         display: grid;
@@ -134,6 +129,7 @@ button:hover{
         text-align: center;
     }
 }
+/* Media quiry for smaller screens  */
 @media screen and (max-width: 440px) {
     .grid{
         display: grid;

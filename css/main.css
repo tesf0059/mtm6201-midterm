@@ -1,9 +1,4 @@
-/* These are the root color of the home page and these two color are moslt used in the page */
-:root{
-    --primary--color:#CF626D;
-    --secondary--color:white;
-    --nav--color--: black;
-}
+/* css */
 /* rest code */
 *{
     margin: 0;
@@ -14,14 +9,14 @@
 body{
     font-family: sans-serif;
 }
-/* used linear gradient to overlay the color on the background image */
+/*  used color on the background image */
 .header{
     background-image: linear-gradient( rgba(107, 97, 97, 0.788),#4e3e3e47),url(../images/Banner.png);
     height: 100vh;
     width: 100%;
     background-size: cover;
 }
-/* this code style the header backgound color, color and all the padding and position1 */
+/* this changes the header backgound color, color */
 .header-text{
     background-color:white;
     padding: 15px 30px;
@@ -30,17 +25,35 @@ body{
     position: relative;
     z-index: 1;
 }
-/* This code make the logo postion on the left side with the size of 45px */
+/* This code make the logo postion on the left side  */
 .logo {
     float: left;
     font-size: 45px;
     line-height: 30px;
     margin-bottom: 30px;
     padding-bottom: 40px;
-    margin-left: 20px; /* Adjusting the margin-left */
+    margin-left: 20px; 
 }
 
-/* Moving the navigation bar to the right */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } 
+}
+
+/* this style the logo part */
+.logo {
+    float: left;
+    font-size: 45px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+    margin-left: 20px; 
+    animation: bounce 2s infinite; /* this is will make the animation */
+}
+
+
+
+/* Move the navigation bar to the right */
 .navbar {
     line-height: 40px;
     float: right; /* Change float to right */
@@ -56,13 +69,13 @@ ul li {
 /* used text-decoration properlty none to hidden the link style */
 ul li a{
     text-decoration: none;
-    color:  var(--nav--color);
+    color:  black;
     padding: 25px;
 }
-/* when the  mouse hover in the navigation this code  change the bacckground color and the color of the link */
+  /* change the bacckground color and the color of the link */ 
 .navbar a:hover{
-    color: var(--primary--color);
-    background-color: var(--secondary--color);
+    color: #CF626D;
+    background-color: antiquewhite;
     border-radius: 8px;
 }
 
@@ -70,17 +83,25 @@ h1{
     color: white;
     font-size: 3rem;
 }  
-#tp-p{
+/* adding animation on the paragagh */
+@keyframes pop {
+    0% { color: rgb(122, 247, 6); }
+    50% { color: #FF5733; } /* Change to the color  */
+    100% { color: rgb(239, 201, 11); }
+}
+
+#tp-p {
     color: white;
     text-align: center;
+    animation: pop 2s infinite; /* Apply the animation */
 }
-/* this code make the heading style postion, text transformation and other property */
+/* this code make the heading style postion*/
 .heading{
     display: inline-block;
     position:absolute;
     text-transform: uppercase;
     font-size: 30px;
-    color: var(--primary--color);
+    color: #CF626D;
     padding: 20px 45px 20px ;
     line-height: 80px;
     top: 35%;
@@ -89,14 +110,14 @@ h1{
 }
 
  
-
+/* styling and decorating the button */
 button{
     width: 170px;
     height: 60px;
     border-radius: 10px;
     margin-top: 10px;
     background-color: #f7e4e5fd;
-    border-color: var(--primary--color);
+    border-color: #CF626D;
     transition: width 1000ms ease-in-out;
 }
 
@@ -106,22 +127,23 @@ button span{
     border-radius: 10px;
     margin-top: 10px;
     background-color: #f7e4e5fd;
-    border-color: var(--primary--color);
+    border-color: #CF626D;
     transition: width 1000ms ease-in-out;
 }
 
-/* when the hover on the botton it width increade from 170px to 200px with 1000ms and eas-in-out transition*/
+/* when the hover on the botton it increase the width */
 button:hover{
     width: 200px;
+    color: #e95906;
 }
 
 .sec1 {
-    text-align: center; /* Aligns the content (including the image) to the center horizontally */
+    text-align: center; /* Aligns the content to the center horizontally */
 }
 
 #img-top {
-    display: block; /* Makes the image a block-level element */
-    margin: 0 auto; /* Centers the image horizontally within its container */
+    display: block; 
+    margin: 0 auto; /* Centers the image horizontally */
     width: 35%;
     margin-top: -180px;
 }
@@ -148,7 +170,7 @@ hr {
 
 .img2 img {
     width: 100%; 
-   
+/* Adjusting the image width */
     
 }
 
@@ -167,7 +189,7 @@ hr {
 
 .sec3 {
     display: flex;
-    flex-direction: row-reverse; /* Arrange items horizontally in reverse order */
+    flex-direction: row-reverse; /* Arrange items horizontally */
     align-items: center; /* Align items vertically in the center */
 }
 #sec-3-h2 {
@@ -194,7 +216,7 @@ hr {
 }
 
 .img3-txt h2 {
-    margin-top: 0; /* Remove default margin for h2 */
+    margin-top: 0; 
 }
 
 /* footer */
@@ -219,13 +241,13 @@ footer .footer-banner {
 
 footer .footer-banner h2,
 footer .footer-banner p {
-    color: var(--secondary--color);
+    color: white;
 }
 
 footer .btn1,
 footer .btn2 {
-    background-color: var(--primary--color);
-    color: var(--secondary--color);
+    background-color: #CF626D;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -244,8 +266,8 @@ button {
     height: 60px;
     border-radius: 10px;
     margin-top: 10px;
-    background-color: #f7e4e5fd;
-    border-color: var(--primary--color);
+    background-color: #f7ece4fd;
+    border-color: #CF626D;
     transition: width 1000ms ease-in-out;
 }
 
@@ -255,7 +277,7 @@ button span {
     border-radius: 10px;
     margin-top: 10px;
     background-color: #f7e4e5fd;
-    border-color: var(--primary--color);
+    border-color: #CF626D;
     transition: width 1000ms ease-in-out;
 }
 
@@ -269,30 +291,7 @@ button:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* styling the footer text aliggn and width and height  */
-
-/* this is meadia query for max-size 1339 and when the screen max size 1339 the below code will apply*/
+/* this is meadia query for max-size 1339 and when the screen max size 1339*/
 @media screen and (max-width: 1338px){
     .logo{
         float: left;
@@ -315,7 +314,7 @@ button:hover {
         display: inline-block;
         position:absolute;
         font-size: 30px;
-        color: var(--primary--color);
+        color: #CF626D;
         padding: 20px 45px 20px ;
         top: 40%;
         margin: 20px 10px;
@@ -329,7 +328,7 @@ button:hover {
         line-height: 10px;
         padding: 30px 40px 20px ;
         margin: 0 0 10px 180px;
-        border-bottom:  var(--secondary--color) 1px solid;
+        border-bottom:  white 1px solid;
     }
     .header-text{
         height: 200px;
@@ -344,7 +343,7 @@ button:hover {
         font-size: 50px;
     }
 }
-/* this is meadia query between 650px and 927px and the code make the nav bar display block because of the screen size*/
+/* this is meadia query between 650px and 927px*/
 @media screen and (min-width: 650px) and (max-width: 927px){
     ul li {
         display: block;
@@ -358,11 +357,38 @@ button:hover {
         float: left;
         font-size: 30px;
         margin-left: 0%;
-        border-bottom:  var(--secondary--color) 1px solid;
+        border-bottom: white 1px solid;
 
     }
     
 }
+/* For screen sizes between 651px and 1050px */
+@media screen and (min-width: 651px) and (max-width: 1050px) {
+    /* Adjustments for the h1 */
+    .heading-h1 {
+        text-align: center; /* Center align the h1 */
+    }
+
+    /* Adjustments for the top image */
+    #img-top {
+        margin: 0; 
+        width: 80%; /* Adjust width */
+    }
+    .sec2,
+    .sec3 {
+        flex-direction: column; /* Change flex direction to column */
+        align-items: center; /* Center align items */
+    }
+}
+
+/* For screen sizes between 426px and 650px */
+@media screen and (min-width: 426px) and (max-width: 650px) {
+    /* Adjustments for the h1 */
+    .heading-h1 {
+        font-size: px; /* Adjust font size */
+    }
+}
+
 
 
 
@@ -436,7 +462,7 @@ button:hover {
         float: left;
         font-size: 25px;
         margin-left: 20px;
-        border-bottom:  var(--secondary--color) 1px solid;
+        border-bottom:white 1px solid;
         max-width: 100%;
     }
     button{
